@@ -1,0 +1,191 @@
+material Container/Blue
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.1 0.35 0.8 1
+      diffuse 0.1 0.35 0.8 1
+      specular 0.2 0.2 0.2 1 12
+    }
+  }
+}
+
+material Container/Green
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.1 0.65 0.25 1
+      diffuse 0.1 0.65 0.25 1
+      specular 0.2 0.2 0.2 1 12
+    }
+  }
+}
+
+material Container/GreenLid
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.14 0.72 0.3 1
+      diffuse 0.14 0.72 0.3 1
+      specular 0.2 0.2 0.2 1 12
+    }
+  }
+}
+
+material Paper/Delivery_a
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture delivery_a.png
+      }
+    }
+  }
+}
+
+material Paper/Dest_a
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture dest_a.png
+      }
+    }
+  }
+}
+
+material Paper/Delivery_b
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture delivery_b.png
+      }
+    }
+  }
+}
+
+material Paper/Dest_b
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture dest_b.png
+      }
+    }
+  }
+}
+
+material Paper/Delivery_c
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture delivery_c.png
+      }
+    }
+  }
+}
+
+material Paper/Dest_c
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture dest_c.png
+      }
+    }
+  }
+}
+
+material Paper/Delivery_d
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture delivery_d.png
+      }
+    }
+  }
+}
+
+material Paper/Dest_d
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture dest_d.png
+      }
+    }
+  }
+}
+
+material Paper/Pickup
+{
+  technique
+  {
+    pass
+    {
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      specular 0 0 0 1
+      texture_unit
+      {
+        texture pickup.png
+      }
+    }
+  }
+}
