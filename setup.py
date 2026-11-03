@@ -34,6 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             'generate_world = field_world.generate_world:main',
+            'command_gate = field_world.command_gate:main',
         ],
     },
 )

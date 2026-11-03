@@ -93,11 +93,9 @@ def _setup(context, *args, **kwargs):
                         '--yaw', LaunchConfiguration('yaw'),
                         '--frame-id', 'map', '--child-frame-id', 'odom']),
 
-        # Nav2 (標準の navigation_launch: map_server / AMCL を含まない)
-        inc(os.path.join(get_package_share_directory('nav2_bringup'),
-                         'launch', 'navigation_launch.py'),
-            {'use_sim_time': 'true', 'autostart': 'true',
-             'params_file': os.path.join(fw, 'config', 'nav2_params_odom_only.yaml')}),
+        # Nav2 + command_gate + Collision Monitor (map_server / AMCL は含まない)
+        inc(os.path.join(fw, 'launch', 'mission_nav.launch.py'),
+            {'use_sim_time': 'true'}),
 
         Node(package='rviz2', executable='rviz2', output='screen',
              condition=IfCondition(LaunchConfiguration('rviz')),

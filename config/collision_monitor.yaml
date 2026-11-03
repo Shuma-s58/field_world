@@ -1,0 +1,36 @@
+# ROS 2 Humble形式: pointsはdouble配列、閾値名はmax_points。
+collision_monitor:
+  ros__parameters:
+    use_sim_time: true
+    base_frame_id: base_link
+    odom_frame_id: odom
+    cmd_vel_in_topic: /cmd_vel_raw
+    cmd_vel_out_topic: /cmd_vel
+    transform_tolerance: 0.2
+    source_timeout: 0.7
+    base_shift_correction: true
+    stop_pub_timeout: 3600.0
+    polygons: [FootprintStop, FrontStop]
+    FootprintStop:
+      type: polygon
+      # 既存footprint(x=-0.3..0.6,y=+-0.3)へ約0.05mの余裕。
+      points: [0.65, 0.35, 0.65, -0.35, -0.35, -0.35, -0.35, 0.35]
+      action_type: stop
+      max_points: 1
+      visualize: true
+      polygon_pub_topic: /box_mission/footprint_stop
+      enabled: true
+    FrontStop:
+      type: polygon
+      # 前端0.6m + 0.3m。到達確認後のSpin中だけmissionがこの領域を外す。
+      points: [0.9, 0.38, 0.9, -0.38, 0.55, -0.38, 0.55, 0.38]
+      action_type: stop
+      max_points: 1
+      visualize: true
+      polygon_pub_topic: /box_mission/front_stop
+      enabled: true
+    observation_sources: [low_scan]
+    low_scan:
+      type: scan
+      topic: /low_scan
+      enabled: true
